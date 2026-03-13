@@ -6,6 +6,7 @@ const connectdb=require("./config/connectdb")
 const productRoutes=require("./routes/productRoutes")
 const userRoutes=require("./routes/userRoutes")
 const cors = require("cors");
+
 connectdb()
 
 const corsOptions = {
@@ -27,8 +28,6 @@ app.use("/user",userRoutes)
 app.use((req,res)=>{
     return res.status(404).send("NOT FOUND")
 })
-
-
 
 
 
